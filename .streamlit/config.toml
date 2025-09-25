@@ -1,0 +1,11 @@
+[streamlit]
+headless = true
+port = $PORT
+enableCORS = false
+enableXsrfProtection = false
+
+[server]
+headless = true
+port = $PORT
+enableCORS = false
+enableXsrfProtection = false

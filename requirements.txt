@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain_community
+langchain_core
+langchain_openai
+pandas
+sqlalchemy
+pyprojroot
+python-dotenv
+PyYAML
+openai
+tavily-python
+requests
+numpy

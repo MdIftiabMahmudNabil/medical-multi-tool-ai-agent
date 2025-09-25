@@ -1,0 +1,30 @@
+directories:
+  datasets_directory: "data"
+  data_directory: "data"
+  heart_disease_db: "data/heart_disease.db"
+  cancer_db: "data/cancer.db"  
+  diabetes_db: "data/diabetes.db"
+
+llm_config:
+  agent_system_role: "You are a medical AI assistant that can answer questions about medical datasets and provide general medical information. For dataset-specific queries, use the appropriate database tool. For general medical knowledge, use web search."
+  db_agent_system_role: "Given the following user question, corresponding SQL query, and SQL result, provide a clear and informative answer about the medical data.\nQuestion: {question}\nSQL Query: {query}\nSQL Result: {result}\nAnswer:"
+  web_search_system_role: "You will receive the user's question along with web search results. Provide accurate medical information based on the search results."
+  model_name: "gpt-4o-mini"
+  temperature: 0.1
+  max_tokens: 1000
+
+database_config:
+  heart_disease:
+    table_name: "heart_disease_data"
+    description: "Heart disease prediction dataset with patient characteristics"
+  cancer:
+    table_name: "cancer_data" 
+    description: "Cancer diagnosis dataset with tumor characteristics"
+  diabetes:
+    table_name: "diabetes_data"
+    description: "Diabetes prediction dataset with patient health metrics"
+
+web_search_config:
+  tavily_api_key_env: "TAVILY_API_KEY"
+  max_results: 5
+  topic: "health"
